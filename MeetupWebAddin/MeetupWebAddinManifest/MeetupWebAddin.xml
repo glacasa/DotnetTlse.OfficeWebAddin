@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <!-- Début des paramètres de base : métadonnées de complément utilisées pour toutes les versions d'Office, sauf en cas de substitution. -->
+
+  <!-- IMPORTANT ! L'ID doit être unique pour votre complément. Si vous réutilisez ce manifeste, veillez à remplacer cet ID par un nouveau GUID. -->
+  <Id>75aa594d-bfb3-4a01-b81c-83196b7e117f</Id>
+
+  <!--Version. Les mises à jour du Windows Store ne se déclenchent qu'en cas de changement de version. -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>glacasa</ProviderName>
+  <DefaultLocale>fr-FR</DefaultLocale>
+  <!-- Nom d'affichage de votre complément. Utilisé dans le Store et à divers endroits de l'interface utilisateur Office, par exemple la boîte de dialogue des compléments. -->
+  <DisplayName DefaultValue="MeetupWebAddin" />
+  <Description DefaultValue="MeetupWebAddin"/>
+
+  <!-- Icône de votre complément. Utilisée dans les écrans d'installation et la boîte de dialogue des compléments. -->
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Button32x32.png" />
+
+  <!-- Domaines autorisés durant la navigation. Par exemple, si vous utilisez ShowTaskpane et un lien href, la navigation n'est autorisée que si le domaine figure sur cette liste. -->
+  <!--<AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>-->
+  <!--Fin des paramètres de base. -->
+  
+  <!--Début de l'intégration du mode TaskPane. Cette section est utilisée en l'absence de VersionOverrides ou si la version du client Office ne prend pas en charge les commandes du complément. -->
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/Home.html" />
+  </DefaultSettings>
+  <!-- Fin de l'intégration du mode TaskPane.  -->
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+</OfficeApp>
